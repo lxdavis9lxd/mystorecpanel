@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "local": "SET restapi=127.0.0.1:8085 && nodemon ./bin/www",
-    "remote": "SET restapi=108.65.159.229:8085 && nodemon ./bin/www",
+    "local": "SET restapi=127.0.0.1 && nodemon ./bin/www",
     "cpanel": "SET restapi=bdpamkedev.com && nodemon ./bin/www",
     "build": "nexe -r views/**/*"
   },

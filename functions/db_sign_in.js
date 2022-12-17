@@ -12,7 +12,7 @@ var cred ={
        //const restapi =  'localhost:8085';
        console.log("RESTAPI IP being used ", process.env.restapi)
        global.db_token_ip = process.env.restapi.trim()
-   console.log('token ipx', global.db_token_ip)
+   //console.log('token ipx', global.db_token_ip)
 
 
 var methods = {
@@ -23,15 +23,15 @@ var methods = {
 
 
 
-        console.log('before');
+        //console.log('before');
         const fetch = require('node-fetch');
-        console.log('hit it', cred);  
+       // console.log('hit it', cred);  
         
         //var dbtoken ='http://bdpamkedev.com:8085/ api/v3/token';
         var dbtoken ='http://' + global.db_token_ip +'/api/v3/token';
         //var bearer = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyIjoicm9vdCJ9LCJpYXQiOjE2NjQ0MTIxNDgsImV4cCI6MTY2NDQ0ODE0OH0.kSIhD1wreJ32HdhFcBdBwyWZ_47hl8mvc0j1JFDsnXY';
         //var holdres = res;
-        console.log('dbtokenhere',dbtoken);
+        //console.log('dbtokenhere',dbtoken);
         const result =  fetch(dbtoken,(
         dbtoken,{
         method: 'POST',
@@ -47,9 +47,9 @@ var methods = {
 }))
 .then((response) => response.json())
 .then((data) => {
- console.log('Success:', data);
+ console.log('Success retrieved token:', data);
   global.DB_token = data.access_token;
-  console.log('golbal:',  global.DB_token);
+  //console.log('golbal:',  global.DB_token);
 })
 .catch((error) => {
   console.error('Error:', error);

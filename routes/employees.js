@@ -17,7 +17,7 @@ var rtnres = '';
 /*
 router.get('/emplistall', async (req, res, next) => {
    // const fetch = require('node-fetch');
-        console.log('hit it',global.DB_token);  
+        //console.log('hit it',global.DB_token);  
         var empurl ='http://108.65.159.229 api/v3/employees/';
         //var empurl ='http://108.65.159.229:8085/ api/v3/customers/?pageNo=1&pageSize=100';
         var bearer = 'Bearer ' +  global.DB_token;
@@ -210,7 +210,7 @@ router.post('/empadd', encodeUrlupdt, (req, res) => {
 // del Employee *******************************          
 /*
 var rtnres = '';
-console.log('before byid');
+//console.log('before byid');
 //load emplistbyid page
 //router.get('/empdel', async (req, res, next) => { rtnres= res.render('empdel',{ resultdata:  ""})});
 // get emplistbyid
