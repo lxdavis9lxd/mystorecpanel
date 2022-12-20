@@ -21,7 +21,7 @@ if ( global.DB_token === 'notoken') {
      functions.data.db_sign_in();   
 };
 */
-functions.data.db_sign_in(); 
+// functions.data.db_sign_in(); 
 var rtnejs='emplistall'
 
 

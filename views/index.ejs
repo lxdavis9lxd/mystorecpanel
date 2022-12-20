@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.boo tstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-      
-  </head>
-  <%- include('../Partials/topNav.ejs') %>
-  <body>
-    <h1></h1>
-    <p>Welcome to ProductRUs<%= title %></p>
-  </body>
+
+<head>
+  <%- include('./partials/head', { title: 'Home' }) -%>
+</head>
+
+<body>
+  <header>
+    <%- include('./partials/header') -%>
+  </header>
+  <p class="text-center">Welcome to ProductRUs</p>
+  <footer>
+    <%- include('./partials/footer') -%>
+  </footer>
+</body>
+
 </html>
