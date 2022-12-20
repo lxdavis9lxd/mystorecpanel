@@ -5,6 +5,7 @@
   "scripts": {
     "local": "SET restapi=127.0.0.1 && nodemon ./bin/www",
     "cpanel": "SET restapi=bdpamkedev.com && nodemon ./bin/www",
+    "cpanel_mac": "restapi=bdpamkedev.com nodemon ./bin/www",
     "build": "nexe -r views/**/*"
   },
   "dependencies": {
