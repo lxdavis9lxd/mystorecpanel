@@ -56,9 +56,9 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   //set the IP address for the rest API
-const restapi = process.env.restapi;
+const restapi = process.env.restapi.trim();
 console.log("RESTAPI IP being used ", restapi)
-global.db_token_ip = restapi.trim()
+global.db_token_ip = "http://bdpamkedev.com"
 //global.db_token_ip = '127.0.0.1:8085'
   // render the error page
   res.status(err.status || 500);

@@ -14,7 +14,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 if ( global.DB_token === 'notoken') {
      //console.log('setting Auth token')
     // functions.data.db_sign_in();   

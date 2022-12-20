@@ -13,7 +13,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 if ( global.DB_token === 'notoken') {
      //console.log('setting Auth token')
     // functions.data.db_sign_in();   
@@ -67,7 +67,7 @@ router.post('/empdel', async (req, res, next) => {
   //***************************************************  
  
   // Call the delete function to delete a record , set a two second wait to give the function time to return data
-  dbcallspost.data.dbCallsPost(dburl,dbstring,dbmethod,dbbody);
+  dbcallspost.data.dbCallspost(dburl,dbstring,dbmethod,dbbody);
      var sleep = require('sleep-promise');
      (async () => {
          //console.log("Printed immediately.");

@@ -13,7 +13,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 var bodyParser = require('body-parser')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // function to log in to the db
@@ -66,7 +66,7 @@ router.post('/empupdtrec', urlencodedParser, async (req, res, next) => {
      dbbody = JSON.stringify({"employeeNumber":req.body.employeeNumber,"lastName":req.body.lastName,"firstName":req.body.firstName,"extension":req.body.extension,"email":req.body.email,"officeCode":req.body.officeCode,"reportsTo":req.body.reportsTo,"jobTitle":req.body.jobTitle})
   //***************************************************  
   // Update Record **********************************************
-  dbcallspost.data.dbCallsPost(dburl,dbstring,dbmethod,dbbody)
+  dbcallspost.data.dbCallspost(dburl,dbstring,dbmethod,dbbody)
   .then((data) =>{
  //refreash page ***********************************
                     dbbody =''

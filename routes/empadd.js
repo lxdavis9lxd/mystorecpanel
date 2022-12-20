@@ -13,7 +13,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 var bodyParser = require('body-parser')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // function to log in to the db
@@ -46,7 +46,7 @@ router.post('/empAdd', urlencodedParser, async (req, res, next) => {
      console.log('dbbody', dbbody)
      //***************************************************  
   // Update Record **********************************************
-  dbcallspost.data.dbCallsPost(dburl,dbstring,dbmethod,dbbody)
+  dbcallspost.data.dbCallspost(dburl,dbstring,dbmethod,dbbody)
   .then((data) =>{
                      statusmesg = "Record Updated: "
                      rtnres= res.render('empadd', { resultdata:  '', resultstatus: statusmesg} );

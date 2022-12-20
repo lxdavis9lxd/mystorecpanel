@@ -14,7 +14,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 /*
 if ( global.DB_token === 'notoken') {
      console.log('setting Auth token is:', global.DB_token)
@@ -29,7 +29,7 @@ router.get('/emplistall', async (req, res, next) => {
 
    console.log('emplistall',req.body.empsearch);
    console.log('ip', global.db_token_ip)
-   dburl='http://' + global.db_token_ip + '/api/v3/employees/';
+   dburl='http://' & global.db_token_ip & '/api/v3/employees/';
    
    dbstring=  ''
    dbmethod='get';

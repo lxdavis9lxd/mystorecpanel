@@ -13,7 +13,7 @@ const fetch = require('node-fetch');
 var router = express.Router();
 var functions = require('../functions/db_sign_in');
 var dbcallsget = require('../functions/dbCallsget');
-var dbcallspost = require('../functions/dbCallsPost');
+var dbcallspost = require('../functions/dbCallspost');
 var bodyParser = require('body-parser')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const bcrypt = require("bcryptjs");
@@ -59,7 +59,7 @@ router.post('/reguser', urlencodedParser, async (req, res, next) => {
             //***************************************************  
           // Update Record **********************************************
 
-          await dbcallspost.data.dbCallsPost(dburl,dbstring,dbmethod,dbbody)
+          await dbcallspost.data.dbCallspost(dburl,dbstring,dbmethod,dbbody)
   .then((data) =>{
                      //console.log('dbbodata', rtnResults.e.sqlMessage)
                       statusmesg=""

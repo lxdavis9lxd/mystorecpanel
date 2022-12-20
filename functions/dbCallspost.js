@@ -7,9 +7,9 @@ var router = express.Router();
 
 // function to log in to the db
 var methods = {
-  dbCallsPost:  async function(dburl,dbstring,dbmethod,dbbody) { 
+  dbCallspost:  async function(dburl,dbstring,dbmethod,dbbody) { 
      
-      console.log('dbCallsPost before dbcall ',dburl,dbstring,dbmethod,dbbody);
+      console.log('dbCallspost before dbcall ',dburl,dbstring,dbmethod,dbbody);
         var empurl = dburl + dbstring;
         var bearer = 'Bearer ' +  global.DB_token;
         const result = await  fetch (empurl,( 
