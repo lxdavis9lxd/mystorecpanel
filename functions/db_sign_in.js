@@ -11,7 +11,7 @@ var cred ={
        }
        //const restapi =  'localhost:8085';
        console.log("RESTAPI IP being used ", process.env.restapi)
-       global.db_token_ip = process.env.restapi.trim()
+       global.db_token_ip = process.env.restapi //.trim()
    //console.log('token ipx', global.db_token_ip)
 
 
@@ -26,7 +26,7 @@ var methods = {
         //console.log('before');
         const fetch = require('node-fetch');
        // console.log('hit it', cred);  
-        
+       //global.db_token_ip = global.db_token_ip.trim()
         //var dbtoken ='http://bdpamkedev.com:8085/ api/v3/token';
         var dbtoken ='http://' + global.db_token_ip +'/api/v3/token';
         //var bearer = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyIjoicm9vdCJ9LCJpYXQiOjE2NjQ0MTIxNDgsImV4cCI6MTY2NDQ0ODE0OH0.kSIhD1wreJ32HdhFcBdBwyWZ_47hl8mvc0j1JFDsnXY';
